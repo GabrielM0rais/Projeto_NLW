@@ -67,8 +67,8 @@ module.exports ={
                 whatsapp: fields.whatsapp,
                 images: fields.images.toString(),
                 instructions: fields.instructions,
-                opening_hours: fields.opening_hours,
-                open_on_weekends: fields.open_on_weekends
+                opening_hours: fields.opening-hours,
+                open_on_weekends: fields.open-on-weekends
             })    
             
             // redirecionamento 
