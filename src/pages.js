@@ -1,5 +1,6 @@
 const Database = require('./database/db')
 const saveOrphanage = require('./database/saveOrphanage')
+const deleteOrphanage = require('./database/deleteOrphanage')
 
 module.exports ={
 
@@ -51,7 +52,7 @@ module.exports ={
 
     async saveOrphanage(req, res){
         const fields = req.body
-        console.log(fields)
+        // console.log(fields)
         // validar se todos os campos estão preenchidos
         if(Object.values(fields).includes('')){
             return res.send("Preencha todos os dados!")
@@ -75,6 +76,19 @@ module.exports ={
             // redirecionamento 
             return res.redirect('/orphanages')
             
+        } catch (error) {
+            console.log(error)
+            return res.send("Erro no banco de dados!")
+        }
+    },
+
+    async deleteOrphanage(req, res){
+        const id = req.body.id
+        // console.log(id)  
+        try {
+            const db = await Database
+            await deleteOrphanage(db, id)
+            return res.redirect('/orphanages')
         } catch (error) {
             console.log(error)
             return res.send("Erro no banco de dados!")

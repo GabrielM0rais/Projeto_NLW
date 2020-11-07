@@ -102,12 +102,10 @@
                         <img src="/images/whatsapp.svg" alt="Chamar no whatsapp">
                         Entre em contato
                     </a>
-
-                    <a  
-                        onClick="deleteId({{orphanage.id}})"
-                        class="exclude-button" type="button">
-                        Excluir
-                    </a>
+                    <form action="delete-orphanage" method="POST">
+                        <input type="hidden" name="id" value="{{orphanage.id}}">
+                        <button class="exclude-button" type="submit"> Excluir </button>
+                    </form>
                 </div>
 
             </div>

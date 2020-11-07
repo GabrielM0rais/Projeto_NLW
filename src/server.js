@@ -24,6 +24,7 @@ server
     .get('/orphanage', pages.orphanage)
     .get('/create-orphanage', pages.createOrphanage)
     .post('/save-orphanage', pages.saveOrphanage)
+    .post('/delete-orphanage', pages.deleteOrphanage)
 
 // ligando o servidor
 server.listen(8800)

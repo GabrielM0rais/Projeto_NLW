@@ -13,7 +13,7 @@ const lng = document.querySelector('span[data-lng]').dataset.lng
 
 
 // create map
-var map = L.map('mapid', options).setView([lat, lng], 15);
+var map = L.map('mapid', options).setView([lat, lng], 16);
 
 // create and att titleLayer
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',).addTo(map);
@@ -58,4 +58,8 @@ function selectImage(event){
 
     /* adicionar a classe .active a esse botão */
     button.classList.add("active")
+}
+
+function deleteId(){
+    deleteOrphanage()
 }
