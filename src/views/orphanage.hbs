@@ -97,13 +97,17 @@
                         {{/if}}
                     </div>
 
-                    <a href="https://api.whatsapp.com/send?l=pt_BR&phone={{orphanage.whatsapp}}" 
-                        target="_blank"
+                    <a href="https://api.whatsapp.com/send?l=pt_BR&phone={{orphanage.whatsapp}}" target="_blank"
                         class="primary-button" type="button">
                         <img src="/images/whatsapp.svg" alt="Chamar no whatsapp">
                         Entre em contato
                     </a>
 
+                    <a  
+                        onClick="deleteId({{orphanage.id}})"
+                        class="exclude-button" type="button">
+                        Excluir
+                    </a>
                 </div>
 
             </div>

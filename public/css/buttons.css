@@ -58,3 +58,30 @@
 .button-select button:last-child{
     border-radius: 0 2rem 2rem 0;
 }
+
+.exclude-button{
+    margin-top: 3.4rem;
+
+    width: 25%;
+    height: 6.4rem;
+    border: 0;
+
+    cursor: pointer;
+
+    background: #FF6347;
+
+    border-radius: 2rem;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    transition: background 0.2;
+}
+
+.exclude-button:hover {
+    background: #FF0000;
+}

@@ -59,4 +59,3 @@ function selectImage(event){
     /* adicionar a classe .active a esse botão */
     button.classList.add("active")
 }
-    

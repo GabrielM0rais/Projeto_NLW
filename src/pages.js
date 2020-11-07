@@ -20,6 +20,7 @@ module.exports ={
 
     async orphanage(req, res){
         const id = req.query.id;
+        // console.log(id)
 
         try {
             const db = await Database;
@@ -67,8 +68,8 @@ module.exports ={
                 whatsapp: fields.whatsapp,
                 images: fields.images.toString(),
                 instructions: fields.instructions,
-                opening_hours: fields.opening-hours,
-                open_on_weekends: fields.open-on-weekends
+                opening_hours: fields.opening_hours,
+                open_on_weekends: fields.open_on_weekends
             })    
             
             // redirecionamento 
